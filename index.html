@@ -1,10 +1,15 @@
-<style type="text/css">
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tee Taiwo</title>
+	<style type="text/css">
 	*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
+@media only screen and (min-width: 768px) {
 nav{
   position: fixed;
   width: 100%;
@@ -123,6 +128,10 @@ img{
   width: 100%;
   background: linear-gradient(to bottom right, rgb(0,24,73), rgb(21,160,132));
   height: 35em;
+  position: absolute;
+  margin-bottom: 0px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
 #contact h1{
   color: rgb(40,129,50);
@@ -185,21 +194,208 @@ section p::after{
 	0%{ transform: rotate(0deg); }
 	100%{ transform: rotate(360deg); }
 }
-@media only screen and(max-width: 480){
-	#welcome-section h1{
-		font-size: 10%;
-	}
 }
 
 
+/*FOR SCREEN BELOW 629px*/
 
+@media only screen and (max-width: 768px) {
+	
+	nav{
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  z-index: 112;
+  max-width: 100%;
+  animation: bac 5s infinite;
+}
+@keyframes bac{
+	0%{background-color: rgb(10,120,226)}
+	20%{background-color: rgb(57,207,117)}
+	40%{background-color:  rgb(91,45,211)}
+	100%{background-color:rgb(10,120,226)}
 
+}
+nav ul{
+  list-style-type: none;
+  width: 100%; 
+  right: 1%;
+  position: fixed;
+  margin-top: 0;
+}
+nav ul li a{
+  display: inline;
+  padding: 20px 22px;
+  background-color: white;
+  float: right;
+  border-radius: 0 50px;
+  margin: 5px;
+  color: rgb(65,211,45);
+  font-size: 15px;
+}
+a{
+  text-decoration: none;
+}
+#welcome-section{
+  background-color: rgb(10,120,226);
+  height: 19em;
+  width: 100%;
+  position: relative;
+  margin-right: 0px;
+  display: flex;
+}
 
+#welcome-section h1{
+  color: white;
+  font-size: 2.5em;
+  position: absolute;
+  top: 38%;
+  right: 25%;
+  text-align: center;
+  font-family: impact, fantasy;
+  animation: anim 10s linear infinite;
+}
+@keyframes anim{
+	0%{color: white}
+	10%{color: rgb(255,162,162)}
+	20%{color: rgb(211,45,72);}
+	30%{color: rgb(45,52,211)}
+	40%{color: rgb(45,158,211)}
+	50%{color: rgb(45,211,125)}
+	60%{color: rgb(72,211,45)}
+	70%{color: rgb(198,211,45)}
+	80%{color: rgb(211,131,45)}
+	90%{color: rgb(211,45,45)}
+	100%{color: white}
+	
+}
+section p{
+	color: rgb(0,24,73);
+	z-index: 33;
+	font-size: 30px;
+	top: 60%;
+	max-width: 100%;
+	
+	position: relative;
+	font-family: courier;
+	animation: ani 4s linear infinite;
+}
+@keyframes ani{
+	0%{left: 20px;}
+	20%{left: -0px;}
+	40%{left: 60px}
+	100%{left: 20px}
+
+}
+#projects{
+  height: 85em;
+  width: 100%;
+  background: linear-gradient(to bottom right, rgb(0,24,73), rgb(21,160,132));
+}
+#projects div{
+	padding: 20px;
+	z-index: 12;
+}
+#mem{
+	background-color: rgb(0,24,73);
+	color: rgb(110,118,219);
+	z-index: 23;
+	font-size: 30px;
+	text-align: center;
+	padding: 20px 50px;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+img{
+  width: 100%;
+  height: 100%;
+  border: 5px solid rgb(0,24,73);
+  border-bottom: 10px solid rgb(0,24,73);
+  border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
+	display: flex;
+	margin-top: 20px;
+  align-items: center;
+}
+#contact{
+  width: 100%;
+  background: linear-gradient(to bottom right, rgb(0,24,73), rgb(21,160,132));
+  height: auto;
+  position: absolute;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 20px;
+}
+#contact h1{
+  color: rgb(40,129,50);
+  font-size: 30px;
+  
+  
+  
+}
+#dow{
+	color: maroon;
+	margin: 60px 0px;
+	margin-bottom: 80px;
+	font-size: 30px;
+}
+#l1{
+	float: right;
+}
+#l2{
+	float: left;
+}
+#l3{
+	float: right;
+}
+#dow a{
+	font-size: 25px;
+	padding: 8px;
+	color: mediumblue;
+}
+#dow a::before{
+	content: "|"
+}
+#dow a::after{
+	content: "|"
+}
+.dow::before{
+	content: "{";
+}
+.dow::after{
+	content: "}";
+}
+section p::before{
+	content: "{";
+}
+section p::after{
+	content: "}";
+}
+
+#ld{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 10px solid lightblue;
+	border-bottom: 10px solid blue;
+	border-top: 10px solid red;
+	border-right: 10px solid green;
+	border-left: 10px solid black;
+	animation: ld 1s linear infinite;
+}
+@keyframes ld{
+	0%{ transform: rotate(0deg); }
+	100%{ transform: rotate(360deg); }
+}
+
+}
 
 
 </style>
-
-<nav id="navbar">
+</head>
+<body>
+	<nav id="navbar">
 	<ul>
 		<li><a href="#welcome-section">About</a></li>
 		<li><a href="#projects">Work</a></li>
@@ -246,3 +442,5 @@ section p::after{
 	</div>
 	</center>
 </section>
+</body>
+</html>
